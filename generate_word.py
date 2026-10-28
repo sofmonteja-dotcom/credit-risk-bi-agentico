@@ -174,7 +174,7 @@ def create_document():
     p7.paragraph_format.line_spacing = 1.15
 
     # Output path
-    out_dir = r"C:\Users\sofi montero\Documents\credit-risk-neon"
+    out_dir = os.path.dirname(os.path.abspath(__file__))
     out_path = os.path.join(out_dir, "Resumen_Proyecto_BI_Agentico_INESDI.docx")
     doc.save(out_path)
     print("Document successfully created at:", out_path)

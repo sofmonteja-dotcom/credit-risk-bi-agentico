@@ -60,7 +60,8 @@ credit-risk-neon/
 
 1. **Clonar / Ubicar el proyecto**:
    ```bash
-   cd "C:\Users\sofi montero\Documents\credit-risk-neon"
+   cd credit-risk-bi-agentico
+   # O en la carpeta donde hayas clonado/descargado el repositorio
    ```
 
 2. **Instalar dependencias**:

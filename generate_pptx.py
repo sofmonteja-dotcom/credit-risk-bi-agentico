@@ -562,7 +562,7 @@ def create_deck():
     r3.font.bold = True
     r3.font.color.rgb = c_yellow
 
-    out_dir = r"C:\Users\sofi montero\Documents\credit-risk-neon"
+    out_dir = os.path.dirname(os.path.abspath(__file__))
     out_path = os.path.join(out_dir, "Presentacion_Hackathon_INESDI_BI_Agentico.pptx")
     prs.save(out_path)
     print("Presentation successfully created at:", out_path)
