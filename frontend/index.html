@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BI Agéntico · Monitorización y Alerta Temprana de Riesgo Crediticio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="badge-tag">HACKATHON INESDI BI AGÉNTICO</span>
+      <h1>Monitorización & Alerta Temprana de Riesgo Crediticio</h1>
+    </div>
+    <div class="status-indicator">
+      <span class="dot online"></span> Neon DB Cloud (32,581 registros)
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Fila de Tarjetas KPI -->
+    <section class="kpi-grid">
+      <div class="card kpi-card">
+        <span class="label">Exposición Total Colocada</span>
+        <h2 id="kpi-exposure">Cargando...</h2>
+        <span class="sub" id="kpi-records">Base Neon PostgreSQL</span>
+      </div>
+      <div class="card kpi-card">
+        <span class="label">Tasa Global de Impago (Default)</span>
+        <h2 id="kpi-default-rate" class="highlight-red">--%</h2>
+        <span class="sub">Objetivo regulatorio &lt; 22%</span>
+      </div>
+      <div class="card kpi-card">
+        <span class="label">Ticket Medio de Crédito</span>
+        <h2 id="kpi-avg-loan">Cargando...</h2>
+        <span class="sub" id="kpi-avg-income">Ingreso medio: --</span>
+      </div>
+      <div class="card kpi-card">
+        <span class="label">Historial de Default Previo</span>
+        <h2 id="kpi-historic-default">--%</h2>
+        <span class="sub">Clientes con mora en buró</span>
+      </div>
+    </section>
+
+    <!-- Fila Gráficos de Distribución -->
+    <section class="charts-grid">
+      <div class="card">
+        <h3>Tasa de Impago por Grado Crediticio (A - G)</h3>
+        <canvas id="chart-grades"></canvas>
+      </div>
+      <div class="card">
+        <h3>Distribución de Préstamos por Propósito</h3>
+        <canvas id="chart-intent"></canvas>
+      </div>
+    </section>
+
+    <!-- Sección Agente Coordinador Interactivo -->
+    <section class="agent-section card">
+      <div class="agent-header">
+        <div class="avatar">🤖</div>
+        <div>
+          <h3>Agente de Decisión BI (Skill + MCP Server)</h3>
+          <p>Consulta en lenguaje natural sobre la cartera o evalúa perfiles de riesgo en Neon.</p>
+        </div>
+      </div>
+      <div class="agent-chat-box">
+        <div id="chat-messages" class="chat-messages">
+          <div class="msg bot">Hola, soy el Agente Coordinador de Riesgo. Puedes consultarme los KPIs de la cartera, solicitar alertas tempranas o pedirme que evalúe a un cliente (ej. <i>"Evaluar cliente #1"</i> o <i>"Dame las alertas críticas"</i>).</div>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="Pregunta al agente (ej: ¿Cuáles son las alertas de riesgo alto?)...">
+          <button id="chat-send-btn" class="btn primary">Consultar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabla de Alertas Tempranas -->
+    <section class="card table-card">
+      <div class="table-header">
+        <div>
+          <h3>🚨 Radar de Alertas Tempranas de Riesgo (Neon Cloud)</h3>
+          <p>Identificación algorítmica de clientes en situación de alta vulnerabilidad financiera.</p>
+        </div>
+        <button id="refresh-alerts-btn" class="btn secondary">Actualizar Alertas</button>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Edad / Ingreso</th>
+              <th>Monto / Propósito</th>
+              <th>DTI (Esfuerzo)</th>
+              <th>Grado</th>
+              <th>Mora Previa</th>
+              <th>Score de Riesgo</th>
+              <th>Nivel</th>
+              <th>Plan de Acción Recomendado</th>
+            </tr>
+          </thead>
+          <tbody id="alerts-tbody">
+            <tr><td colspan="9" style="text-align:center;">Cargando alertas desde Neon...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hackathon INESDI · Sistemas Agénticos para Business Intelligence · Powered by Neon PostgreSQL Serverless & Model Context Protocol</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

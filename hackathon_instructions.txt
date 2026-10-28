@@ -1,0 +1,255 @@
+Command exited with code 0.
+Command output:
+Hackathon · Sistemas agénticos para Business Intelligence
+INESDI
++
+BUSINESS
+TECHSCHOOL
+Cronómetro
+El reto
+Arquitectura
+Pruebas
+Entrega
+Reflexión
+Learning by doing
+Business Intelligence × Inteligencia Artificial · Hackathon de aula
+Construye un
+sistema agéntico
+que funcione.
+Investiga un problema de empresa, utiliza datos reales, construye agentes con Skills y MCP, prueba todas las conexiones y demuestra una solución útil para tomar decisiones.
+Comenzar el hackathon ↗
+Ver entregables
+Imprimir / PDF
+5 h
+Construcción
+6
+Fases guiadas
+1+
+MCP real
+100%
+Demostrable
+LISTO PARA EMPEZAR
+Cronómetro del hackathon
+START · 5 HORAS
+PAUSAR
+REINICIAR
+05:00:00
+Tiempo restante del hackathon
+PRÓXIMA FASE · 01 / 06
+Investigación y problema
+45 minutos asignados a esta fase.
+Empieza cuando pulses START
+Después: Dataset y base de datos
+El cronómetro es individual para cada navegador y se guarda en este dispositivo. Al cerrar o recargar la página, seguirá contando si está en marcha. La referencia es el momento en que pulses START.
+01 / Hoja de ruta
+De la idea al sistema, paso a paso.
+Trabajo en equipo durante cinco horas. Al terminar, el proyecto debe estar preparado para su defensa y demostración al día siguiente.
+45 min investigación · 40 min datos · 35 min arquitectura · 135 min desarrollo · 30 min pruebas · 15 min reflexión
+PASO 01
+Investiga y elige el problema
+45 MIN
+Crea un proyecto en ChatGPT o Claude con instrucciones, contexto y fuentes.
+Propón 
+5 problemas
+ de Business Intelligence (pensamiento divergente).
+Investiga mercado, soluciones actuales, competidores y limitaciones.
+Compara opciones (pensamiento convergente) y elige una.
+Define usuario, propuesta de valor, objetivos y KPI.
+Utiliza la IA para cuestionar ideas, contrastar hipótesis y documentar fuentes.
+PASO 02
+Encuentra datos reales
+40 MIN
+Localiza un dataset real en Kaggle, INE, Datos.gob.es o APIs públicas.
+Documenta fuente, licencia, estructura, calidad y posibles errores.
+Importa los datos a Supabase, PostgreSQL, SQLite u otra base de datos.
+Comprueba que tu sistema puede consultarlos.
+Los datos sintéticos solo como complemento y claramente identificados.
+PASO 03
+Diseña la arquitectura
+35 MIN
+Define agente principal, instrucciones, decisiones y tareas.
+Diseña al menos una Skill propia.
+Selecciona un servidor MCP y sus herramientas reales.
+Define base de datos, backend, frontend y flujo de principio a fin.
+Prevé errores y acciones que requieren autorización.
+Crea un diagrama entendible antes de empezar a programar.
+PASO 04
+Construye con vibe coding
+2 H 15 MIN
+Trabaja con IDE + CLI de IA (VS Code, Codex, Claude Code, Antigravity...).
+Obligatorio:
+ utiliza y adapta una librería de GitHub.
+Crea carpetas, instrucciones del agente y una Skill propia.
+Conecta un MCP real, la base de datos y el backend.
+Construye un frontend o interacción equivalente.
+Haz que el agente ejecute un proceso real y verificable.
+Preferencia: guarda el proyecto completo en un repositorio GitHub.
+PASO 05
+Prueba y valida
+30 MIN
+Ejecuta la batería de pruebas completa que aparece más abajo.
+Registra resultado esperado, observado, estado y evidencia.
+Documenta errores, correcciones y limitaciones.
+Valida los cálculos y conclusiones de BI con los datos originales.
+Las pruebas son fundamentales. No basta con que el sistema parezca funcionar.
+PASO 06
+Reflexiona y aprende
+15 MIN
+Responde individualmente a las cinco preguntas de reflexión.
+Debate con tu equipo las otras cinco preguntas.
+Define qué mantener, cambiar y experimentar.
+Guarda las respuestas en 
+REFLEXION.md
+.
+Importa tanto el proceso de aprendizaje como el resultado técnico.
+02 / Ingeniería del sistema
+Una arquitectura real.
+No una simulación.
+El agente debe poder consultar datos, invocar herramientas y entregar resultados útiles. Los archivos Markdown documentan su comportamiento; la ejecución debe estar implementada.
+Flujo funcional mínimo
+Usuario / Interfaz
+Petición de análisis o acción
+↓
+Agente coordinador
+Instrucciones, razonamiento y selección de herramientas
+↓
+Skill
+Proceso propio
+MCP
+Herramientas reales
+Datos
+SQL / Supabase
+↓
+Backend → Resultado BI
+KPI, informe, alerta o recomendación comprobable
+Estructura mínima del repositorio
+proyecto-agentes/
+├── README.md
+├── AGENTS.md
+├── .env.example
+├── investigacion/
+│   ├── mercado.md
+│   └── problema.md
+├── agents/
+├── skills/
+│   └── mi-skill/
+│       └── SKILL.md
+├── data/
+│   └── fuente.md
+├── backend/
+├── frontend/
+├── config/
+├── tests/
+│   └── pruebas.md
+└── REFLEXION.md
+Adapta las carpetas a tu tecnología. Incluye instrucciones para instalar dependencias y ejecutar el sistema. No subas credenciales ni claves API a GitHub.
+GitHub conserva el código, no lo ejecuta:
+ puedes demostrarlo en local o desplegarlo aparte. Una web estática en GitHub Pages puede servir como frontend, pero no como backend persistente.
+03 / Criterio crítico del hackathon
+Si no se prueba, no se ha demostrado.
+Preparad una batería de pruebas con evidencias que se pueda enseñar durante la presentación. Marcad cada caso cuando esté verificado.
+Componente
+Verificación obligatoria
+OK
+0 de 9 pruebas verificadas
+El progreso de esta página es local y no sustituye a 
+tests/pruebas.md
+.
+Reiniciar marcadores
+Qué documentar en cada prueba
+1. Qué se prueba y con qué entrada.
+2. Resultado esperado.
+3. Resultado obtenido.
+4. Estado: aprobado, fallido o pendiente.
+5. Evidencia: captura, log, consulta, vídeo o salida reproducible.
+6. Si falla: causa, corrección o limitación conocida.
+Una demo convincente no oculta los errores: muestra qué se ha probado y qué límites tiene el sistema.
+04 / Learning by doing · inspirado en Kaospilot
+¿Qué hemos aprendido de verdad?
+La reflexión debe estar escrita y preparada para la defensa. Cada persona responde individualmente; después, el grupo acuerda una respuesta colectiva.
+REFLEXIÓN INDIVIDUAL
+Cada integrante responde
+¿Qué he aprendido hoy?
+¿Qué me llevo y cómo lo aplicaré?
+¿Dónde me he bloqueado y cómo lo he afrontado?
+¿Qué he aportado al equipo?
+¿Qué haría diferente la próxima vez?
+REFLEXIÓN COLECTIVA
+El equipo conversa y acuerda
+¿Qué hemos aprendido trabajando juntos?
+¿Qué nos llevamos de esta experiencia?
+¿Dónde nos hemos bloqueado y cómo lo hemos resuelto?
+¿Cómo hemos decidido, escuchado y cuestionado a la IA?
+¿Qué haríamos diferente si empezáramos de nuevo?
+Tres compromisos de mejora
+Vamos a mantener...
+ · 
+Vamos a cambiar...
+ · 
+Vamos a experimentar...
+Guardad las respuestas de todas las personas y el consenso del equipo en 
+REFLEXION.md
+. Se valora la honestidad, el pensamiento crítico y el aprendizaje, no las respuestas perfectas.
+05 / Entrega y defensa
+Todo listo para enseñar mañana.
+Entregables en GitHub (preferente)
+ Investigación, problemas alternativos, fuentes y KPI
+ Dataset real, licencia y base de datos
+ Diagrama de arquitectura del sistema agéntico
+ Código, librería GitHub adaptada, Skills y MCP
+ README con instrucciones de ejecución
+ Batería de pruebas con resultados y evidencias
+ REFLEXION.md individual y de equipo
+Si no es posible publicar en GitHub, entregad una carpeta comprimida con todo el proyecto y sus dependencias documentadas.
+Presentación: demostración en directo
+01
+ · Problema, investigación y oportunidad.
+02
+ · Arquitectura, Skills, MCP y base de datos.
+03
+ · Ejecutar el sistema de principio a fin, mostrando frontend, backend y conexiones.
+04
+ · Enseñar la batería de pruebas y explicar errores detectados.
+05
+ · Tener preparadas las respuestas individuales y de equipo de la reflexión.
+Todos los integrantes
+ deben conocer el proyecto y poder responder preguntas.
+06 / Evaluación
+Lo que cuenta.
+15%
+Investigación y pensamiento crítico
+10%
+Datos reales y base de datos
+20%
+Arquitectura, Skills y MCP
+20%
+Desarrollo, GitHub y funcionamiento
+20%
+Batería de pruebas y validación
+15%
+Reflexión individual y colectiva
+Un sistema sencillo, real y probado vale más que una arquitectura espectacular que no se puede ejecutar.
+07 / Recursos para comenzar
+Fuentes y herramientas.
+Datasets reales
+Kaggle
+ · 
+Datos.gob.es
+ · 
+INE
+MCP
+Arquitectura oficial MCP
+ · 
+Servidores de referencia en GitHub
+Repositorio
+GitHub
+ · 
+GitHub Pages
+ para publicar un frontend estático.
+INESDI
++
+BUSINESS
+TECHSCHOOL
+Hackathon educativo · Business Intelligence × sistemas agénticos · Learning by Doing.
+Diseño académico inspirado en la identidad visual de INESDI. Logotipo textual recreado para esta página; no es un sitio oficial de la institución.
+↑ Inicio
